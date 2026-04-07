@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Riya Shenvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - MonoMuse</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <div id="navLinks" class="nav_links">
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="membership.html">Membership</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <button type="button" class="nav_hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h1 class="page-title">Order confirmation</h1>
+            <div id="orderConfirmation" class="order-confirmation"></div>
+        </main>
+        <figure class="main_img"></figure>
+        <footer class="footer">
+            <section class="visitor-footer" aria-labelledby="footer-visit-title">
+                <h2 id="footer-visit-title" class="visitor-footer-heading">Plan your visit</h2>
+                <p><strong>Hours:</strong> Tuesday–Sunday 10 a.m.–5 p.m. · <strong>Contact:</strong> <a href="tel:+14125550199">(412) 555-0199</a> · <a href="mailto:visit@monomuse.org">visit@monomuse.org</a></p>
+            </section>
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

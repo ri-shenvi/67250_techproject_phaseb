@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Riya Shenvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - MonoMuse</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- Leaflet 1.9.4 — https://leafletjs.com/ | Map tiles © OpenStreetMap contributors -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><!-- Leaflet JS -->
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <div id="navLinks" class="nav_links">
+                <a id="navselected" href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="membership.html">Membership</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <button type="button" class="nav_hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h1 class="page-title">Explore</h1>
+            <h2>Mission statement</h2>
+            <p>MonoMuse is dedicated to exploring the evolving relationship between art, technology, and society...</p>
+
+            <h2>Who we serve</h2>
+            <p>MonoMuse welcomes a diverse audience including students, artists, technologists...</p>
+
+            <h2>Founded</h2>
+            <p>MonoMuse was founded in 2016.</p>
+
+            <h2>Milestones</h2>
+            <ul>
+                <li>2016: First exhibition on digital storytelling</li>
+                <li>2018: Interactive Media Lab launched</li>
+                <li>2023: Expansion and global collaborations</li>
+            </ul>
+
+            <h2 id="visit-location">Visit &amp; location</h2>
+            <p>
+                MonoMuse is imagined in Pittsburgh near Carnegie Mellon University. Use the map below to explore the area
+                (OpenStreetMap tiles via <a href="https://leafletjs.com/">Leaflet</a>).
+            </p>
+            <div id="map" role="region" aria-label="Interactive map of MonoMuse area" aria-labelledby="visit-location"></div>
+        </main>
+
+        <figure class="main_img">
+            <img src="../static/museum.jpg" alt="Exterior view of MonoMuse museum building at dusk with glass facade" width="400">
+            <figcaption class="media-credits">Exterior visualization: student project asset (not a real building).</figcaption>
+        </figure>
+
+        <footer class="footer">
+            <section class="visitor-footer" aria-labelledby="footer-visit-title">
+                <h2 id="footer-visit-title" class="visitor-footer-heading">Plan your visit</h2>
+                <p><strong>Hours:</strong> Tuesday–Sunday 10 a.m.–5 p.m. Closed Mondays and major holidays.</p>
+                <p><strong>Location:</strong> 4400 Forbes Avenue, Pittsburgh, PA 15213 (Oakland, near Carnegie Mellon University).</p>
+                <p><strong>Admission:</strong> See <a href="tickets.html">tickets and pricing</a> (demo checkout uses $18 per ticket).</p>
+                <p><strong>Contact:</strong> <a href="tel:+14125550199">(412) 555-0199</a> · <a href="mailto:visit@monomuse.org">visit@monomuse.org</a></p>
+            </section>
+            <p class="media-credits">Interactive map: © OpenStreetMap contributors; <a href="https://leafletjs.com/">Leaflet</a> library.</p>
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Riya Shenvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions - MonoMuse</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <!-- jQuery: https://jquery.com/ — exhibition gallery prev/next with fade (see static/script.js) -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <div id="navLinks" class="nav_links">
+                <a href="explore.html">Explore</a>
+                <a id="navselected" href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="membership.html">Membership</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <button type="button" class="nav_hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h1 class="page-title">Exhibitions</h1>
+
+            <h2>Digital Dreams: Art in the Age of Algorithms</h2>
+            <p>This exhibition explores how artists are using AI and algorithms...</p>
+
+            <h2>Code &amp; Canvas: The Language of Creative Technology</h2>
+            <p>This exhibition highlights programming as a medium for artistic creation...</p>
+
+            <h2>Exhibition gallery</h2>
+            <p>Use the previous and next controls to view installation and concept imagery (three slides).</p>
+            <div class="exhibition-gallery">
+                <div class="gallery-viewport">
+                    <img id="gallerySlideImg" src="../static/museum.jpg" alt="Exterior of the MonoMuse building at dusk with illuminated signage on the facade" width="800">
+                </div>
+                <p id="galleryCaption" class="gallery-caption"></p>
+                <div class="gallery-controls">
+                    <button type="button" class="cta cta-compact" id="galleryPrev">Previous image</button>
+                    <button type="button" class="cta cta-compact" id="galleryNext">Next image</button>
+                </div>
+            </div>
+
+            <h2>Film: scale, perspective, and wonder</h2>
+            <h3>Context</h3>
+            <p>
+                MonoMuse shares the same impulse as science and design museums: help visitors see the world differently.
+                The short film <cite>Powers of Ten</cite> (1977) by the Eames Office is a classic piece of educational
+                media—often used in museum and classroom settings—that zooms from human scale out to the cosmos and inward
+                to the atomic scale.
+            </p>
+            <!-- Embedded player: YouTube (Google) — https://www.youtube.com/ -->
+            <div class="video-embed-wrap">
+                <iframe
+                    class="video-embed"
+                    src="https://www.youtube.com/embed/0fKBhvDjuy0"
+                    title="Powers of Ten (1977) by Eames Office"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+            <p class="video-attribution">
+                Video: <cite>Powers of Ten</cite> © Eames Office; embedded via YouTube for educational context.
+                Student site: ensure your institution’s use complies with YouTube Terms of Service.
+            </p>
+        </main>
+        <figure class="main_img"></figure>
+        <footer class="footer">
+            <section class="visitor-footer" aria-labelledby="footer-visit-title">
+                <h2 id="footer-visit-title" class="visitor-footer-heading">Plan your visit</h2>
+                <p><strong>Hours:</strong> Tuesday–Sunday 10 a.m.–5 p.m. Closed Mondays and major holidays.</p>
+                <p><strong>Location:</strong> 4400 Forbes Avenue, Pittsburgh, PA 15213 (Oakland, near Carnegie Mellon University).</p>
+                <p><strong>Admission:</strong> See <a href="tickets.html">tickets and pricing</a> (demo checkout uses $18 per ticket).</p>
+                <p><strong>Contact:</strong> <a href="tel:+14125550199">(412) 555-0199</a> · <a href="mailto:visit@monomuse.org">visit@monomuse.org</a></p>
+            </section>
+            <p class="media-credits">Gallery: museum exterior photo (student asset) plus original SVG panels for this project. Video attribution above.</p>
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,568 @@
+/**
+ * MonoMuse styles — course project (no CSS frameworks).
+ * Typography: Google Fonts "Roboto" (linked in HTML).
+ */
+
+/* Global Styling */
+* {
+    padding: 5px;
+    margin: 5px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    line-height: 1.5;
+    font-style: normal;
+    background: #0b0b0c;
+    color: #f5f5f7;
+}
+
+/* Keyboard focus (no flashing; visible focus ring) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #92ad70;
+    outline-offset: 2px;
+}
+
+/* Logo Styling */
+#logo {
+    width: 18%;
+    display: block;
+}
+
+/* One h1 per page: main page topic */
+.page-title {
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+/* Navigation Styling */
+nav a {
+    text-decoration: none;
+    color: #f5f5f7;
+    font-weight: 400;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Hamburger: hidden on larger screens */
+.nav_hamburger {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: #f5f5f7;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 8px 10px;
+    font-weight: 400;
+}
+
+.nav_hamburger:hover {
+    border-color: #4d5c3b;
+}
+
+/* Hover effect */
+nav a:hover {
+    border-color: #4d5c3b;
+}
+
+/* Active page highlight */
+.active {
+    color: #92ad70;
+}
+
+/* CTA Button */
+.cta {
+    background-color: #92ad70;
+    color: #0b0b0c;
+    text-decoration: none;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* Optional hover for CTA */
+.cta:hover {
+    background-color: #a8c47d;
+}
+
+/* Compact CTA for tables / inline actions (avoids oversized pills in cells) */
+a.cta.cta-compact {
+    display: inline-block;
+    padding: 4px 12px;
+    margin: 0;
+    font-size: 0.8125rem;
+    line-height: 1.25;
+    border-radius: 8px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.main p .cta + .cta {
+    margin-left: 0.75rem;
+}
+
+/* Footer Styling */
+footer {
+    border-top: 1px solid #4d5c3b;
+    padding: 18px 16px;
+    text-align: center;
+    color: #cfcfcf;
+}
+
+.visitor-footer {
+    text-align: left;
+    max-width: 40rem;
+    margin: 0 auto 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #2a2a2e;
+}
+
+.visitor-footer-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #92ad70;
+}
+
+.visitor-footer p {
+    margin: 0.4rem 0;
+    text-align: left;
+}
+
+.footer-subheading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #cfcfcf;
+    margin: 1rem auto 0.35rem;
+    max-width: 40rem;
+    text-align: left;
+}
+
+.media-credits {
+    font-size: 0.8rem;
+    color: #9a9a9e;
+    max-width: 40rem;
+    margin: 0.75rem auto;
+    text-align: left;
+}
+
+/* Exhibition image gallery (jQuery fade; 3+ slides) */
+.exhibition-gallery {
+    max-width: 36rem;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.gallery-viewport {
+    background: #1a1a1c;
+    border: 1px solid #4d5c3b;
+    border-radius: 12px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.gallery-viewport img {
+    width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+}
+
+.gallery-caption {
+    font-size: 0.85rem;
+    color: #b8b8bc;
+    margin: 0.5rem 0 0.75rem;
+    line-height: 1.4;
+}
+
+.gallery-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.video-attribution {
+    font-size: 0.8rem;
+    color: #9a9a9e;
+    margin-top: 0.75rem;
+    max-width: 36rem;
+    text-align: left;
+}
+
+/* Membership FAQ accordion (jQuery slideToggle) */
+.membership-accordion {
+    max-width: 36rem;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.accordion-trigger {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    cursor: pointer;
+    background: #1a1a1c;
+    color: #f5f5f7;
+    border: 1px solid #4d5c3b;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: inherit;
+    margin-bottom: 0.35rem;
+}
+
+.accordion-trigger:hover {
+    border-color: #92ad70;
+}
+
+.accordion-panel {
+    display: none;
+    margin: 0 0 0.75rem;
+    padding: 0.5rem 0 0.75rem 1rem;
+    border-left: 3px solid #4d5c3b;
+}
+
+.accordion-panel p {
+    margin: 0.35rem 0;
+    text-align: left;
+}
+
+/* Table Styling */
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: fit-content;
+    background-color: #92ad70;
+    color: #0b0b0c;
+}
+
+tr:nth-child(even) {
+    background-color: #1a1a1c;
+}
+
+/* Form Styling */
+form * {
+    margin: auto;
+    text-align: center;
+}
+
+/* Checkout & confirmation (left-aligned, clear errors) */
+form.checkout-form {
+    max-width: 28rem;
+    text-align: left;
+}
+
+form.checkout-form .form-field,
+form.checkout-form .price-summary,
+form.checkout-form .checkout-submit {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+}
+
+form.checkout-form .form-field label,
+form.checkout-form .form-field input,
+form.checkout-form .form-field select {
+    margin: 0;
+    text-align: left;
+}
+
+.checkout-intro {
+    text-align: left;
+    max-width: 36rem;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 400;
+}
+
+.optional-label {
+    font-weight: 100;
+    color: #cfcfcf;
+}
+
+.form-field-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.form-field-checkbox input {
+    margin-top: 0.35rem;
+}
+
+.form-field-checkbox label {
+    display: inline;
+    margin-bottom: 0;
+}
+
+form.checkout-form input[type="text"],
+form.checkout-form input[type="email"],
+form.checkout-form input[type="number"],
+form.checkout-form input[type="date"],
+form.checkout-form select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.field-error {
+    display: block;
+    min-height: 1.35em;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    color: #f0a0a0;
+}
+
+.field-hint {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: #b8b8bc;
+}
+
+.price-summary {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #92ad70;
+    margin: 1rem 0;
+}
+
+.checkout-submit {
+    margin-top: 0.5rem;
+}
+
+.order-confirmation {
+    text-align: left;
+    max-width: 36rem;
+}
+
+.order-confirmation .order-total {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #92ad70;
+    margin: 1rem 0;
+}
+
+/* Embedded YouTube / video iframe (dimensions controlled in CSS, not on the tag) */
+.video-embed-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin: 16px auto;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #4d5c3b;
+}
+
+.video-embed-wrap iframe.video-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Leaflet map container (height required or map has 0 size) */
+#map {
+    height: 320px;
+    max-width: 100%;
+    margin: 12px auto;
+    padding: 0;
+    border-radius: 12px;
+    border: 1px solid #4d5c3b;
+    overflow: hidden;
+}
+
+/* CSS Grid Layout */
+.container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'nav_bar nav_bar'
+        'main main-img'
+        'footer footer';
+}
+
+/* Grid Areas */
+.header {
+    grid-area: header;
+}
+
+.nav_bar {
+    grid-area: nav_bar;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main_img {
+    grid-area: main-img;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* Increment 4 Part 5 */
+#longIntro {
+    display: none;
+}
+
+#readLess {
+    display: none;
+}
+
+/* ----------------------------- */
+/* Mobile Responsive Design */
+/* ----------------------------- */
+
+@media only screen and (max-width: 768px) {
+
+    /* Stack grid vertically */
+    .container {
+        grid-template-areas:
+            'header'
+            'nav_bar'
+            'main'
+            'main-img'
+            'footer';
+    }
+
+    /* Stacked nav for tablet widths only; below 650px see hamburger rules */
+    @media only screen and (min-width: 651px) {
+        .nav_bar {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav_links {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav_bar > a,
+        .nav_links a {
+            display: block;
+            width: 90%;
+            text-align: center;
+        }
+    }
+
+    /* Resize logo */
+    #logo {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    /* Stack main content */
+    .main {
+        text-align: center;
+    }
+
+    /* Make images responsive */
+    .main_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Tables scroll instead of breaking layout */
+    table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    /* Buttons easier to tap (exclude nav hamburger, accordion, compact CTAs) */
+    button:not(.nav_hamburger):not(.accordion-trigger),
+    .cta:not(.cta-compact),
+    input[type="submit"] {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    a.cta.cta-compact {
+        width: auto;
+        font-size: 0.875rem;
+    }
+
+    /* Form inputs full width */
+    input {
+        width: 90%;
+    }
+}
+
+/* Responsive nav: hamburger under 650px */
+@media only screen and (max-width: 650px) {
+    .nav_bar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav_hamburger {
+        display: block;
+        margin-left: auto;
+        width: auto;
+    }
+
+    /* Hide collapsible links until toggled; Home stays visible */
+    .nav_links {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links.responsive {
+        display: flex;
+    }
+
+    .nav_links.responsive a {
+        display: block;
+        width: 90%;
+        text-align: center;
+    }
+}

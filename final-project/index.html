@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Riya Shenvi">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse</title>
+
+    <link rel="stylesheet" href="./static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <!-- jQuery: https://jquery.com/ — used for slide animations on this page (see static/script.js) -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
+    <script src="./static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="index.html">Home</a>
+            <div id="navLinks" class="nav_links">
+                <a href="views/explore.html">Explore</a>
+                <a href="views/exhibitions.html">Exhibitions</a>
+                <a href="views/tickets.html">Tickets</a>
+                <a href="views/membership.html">Membership</a>
+                <a href="views/checkout.html">Checkout</a>
+            </div>
+            <button type="button" class="nav_hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h1 class="page-title">MonoMuse</h1>
+            <p id="timeGreeting" class="tagline" role="status" aria-live="polite"></p>
+            <p id="shortIntro">
+                MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human creativity.
+            </p>
+
+            <a class="cta" href="views/tickets.html">Buy Tickets</a>
+
+            <p id="longIntro">
+                Through immersive exhibitions, interactive installations, and rotating collections, MonoMuse invites visitors to discover how digital innovation is transforming the way we create, experience, and understand art. Whether you are a first-time visitor or a returning member, our exhibitions offer new perspectives on the role of technology in culture and everyday life.
+            </p>
+
+            <button id="readMore" class="cta">Read More</button>
+            <button id="readLess" class="cta">Read Less</button>
+        </main>
+
+        <figure class="main_img"></figure>
+
+        <footer class="footer">
+            <section class="visitor-footer" aria-labelledby="footer-visit-title">
+                <h2 id="footer-visit-title" class="visitor-footer-heading">Plan your visit</h2>
+                <p><strong>Hours:</strong> Tuesday–Sunday 10 a.m.–5 p.m. Closed Mondays and major holidays.</p>
+                <p><strong>Location:</strong> 4400 Forbes Avenue, Pittsburgh, PA 15213 (Oakland, near Carnegie Mellon University).</p>
+                <p><strong>Admission:</strong> See <a href="views/tickets.html">tickets and pricing</a> (demo checkout uses $18 per ticket).</p>
+                <p><strong>Contact:</strong> <a href="tel:+14125550199">(412) 555-0199</a> · <a href="mailto:visit@monomuse.org">visit@monomuse.org</a></p>
+            </section>
+            <h3 class="footer-subheading">Media &amp; credits</h3>
+            <p class="media-credits">Logo: student project asset. Interactive map on <a href="views/explore.html">Explore</a> uses © OpenStreetMap contributors via Leaflet.</p>
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

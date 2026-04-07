@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Riya Shenvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets - MonoMuse</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <div id="navLinks" class="nav_links">
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="membership.html">Membership</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <button type="button" class="nav_hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h1 class="page-title">Buy tickets</h1>
+
+            <h2>Ticket prices</h2>
+            <p>Online checkout uses a flat <strong>$18 per ticket</strong> for every type in this demo (general, student, or member).</p>
+            <table border="1">
+                <tr>
+                    <th>Ticket type</th>
+                    <th>Description</th>
+                    <th>Price at checkout</th>
+                </tr>
+                <tr>
+                    <td>General</td>
+                    <td>General admission for ages 18+</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Student ID required at entry</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Member</td>
+                    <td>Member ID required at entry</td>
+                    <td>$18</td>
+                </tr>
+            </table>
+
+            <h2>Available dates this month</h2>
+            <p>Choose a date to open the checkout page with that day pre-selected. You will complete payment details on the checkout screen (simulated—no real charge).</p>
+            <table border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Availability</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>April 12, 2026</td>
+                    <td>Available</td>
+                    <td><a class="cta cta-compact" href="checkout.html?date=2026-04-12">Buy now</a></td>
+                </tr>
+                <tr>
+                    <td>April 18, 2026</td>
+                    <td>Available</td>
+                    <td><a class="cta cta-compact" href="checkout.html?date=2026-04-18">Buy now</a></td>
+                </tr>
+                <tr>
+                    <td>April 24, 2026</td>
+                    <td>Available</td>
+                    <td><a class="cta cta-compact" href="checkout.html?date=2026-04-24">Buy now</a></td>
+                </tr>
+                <tr>
+                    <td>April 30, 2026</td>
+                    <td>Available</td>
+                    <td><a class="cta cta-compact" href="checkout.html?date=2026-04-30">Buy now</a></td>
+                </tr>
+            </table>
+
+            <p><a class="cta" href="checkout.html">Go to checkout</a> without a pre-selected date.</p>
+        </main>
+
+        <figure class="main_img"></figure>
+
+        <footer class="footer">
+            <section class="visitor-footer" aria-labelledby="footer-visit-title">
+                <h2 id="footer-visit-title" class="visitor-footer-heading">Plan your visit</h2>
+                <p><strong>Hours:</strong> Tuesday–Sunday 10 a.m.–5 p.m. Closed Mondays and major holidays.</p>
+                <p><strong>Location:</strong> 4400 Forbes Avenue, Pittsburgh, PA 15213 (Oakland, near Carnegie Mellon University).</p>
+                <p><strong>Admission:</strong> Pricing shown on this page; demo checkout uses $18 per ticket.</p>
+                <p><strong>Contact:</strong> <a href="tel:+14125550199">(412) 555-0199</a> · <a href="mailto:visit@monomuse.org">visit@monomuse.org</a></p>
+            </section>
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

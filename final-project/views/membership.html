@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Riya Shenvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership &amp; Donations - MonoMuse</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <!-- jQuery: https://jquery.com/ — FAQ accordion slideToggle (see static/script.js) -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <div id="navLinks" class="nav_links">
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a id="navselected" href="membership.html">Membership</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <button type="button" class="nav_hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h1 class="page-title">Membership &amp; donations</h1>
+            <p>
+                Whether you are visiting for the first time, studying in Pittsburgh, or already part of our community,
+                you can help MonoMuse grow. Memberships keep our doors open for students and neighbors; donations fund
+                new exhibitions, artist residencies, and free public programs.
+            </p>
+
+            <h2>Who you are</h2>
+            <ul>
+                <li><strong>Guest / visitor:</strong> Explore the museum with a day ticket, then decide if you want to come back often—members save on every visit.</li>
+                <li><strong>Student:</strong> Discounted student membership includes unlimited admission and invites to student nights and workshops.</li>
+                <li><strong>Member:</strong> Full members receive guest passes, shop discounts, and early access to ticketed events.</li>
+            </ul>
+
+            <h2>Membership options</h2>
+            <table border="1">
+                <tr>
+                    <th>Level</th>
+                    <th>Best for</th>
+                    <th>Annual fee</th>
+                    <th>Key benefits</th>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Current students with a valid ID</td>
+                    <td>$35</td>
+                    <td>Unlimited admission; student programs; newsletter</td>
+                </tr>
+                <tr>
+                    <td>Individual</td>
+                    <td>One named adult</td>
+                    <td>$75</td>
+                    <td>Unlimited admission; 10% museum shop; member previews</td>
+                </tr>
+                <tr>
+                    <td>Dual / family</td>
+                    <td>Two adults or household</td>
+                    <td>$120</td>
+                    <td>All Individual benefits; two membership cards; four guest passes/year</td>
+                </tr>
+                <tr>
+                    <td>Patron</td>
+                    <td>Supporters who want deeper engagement</td>
+                    <td>$300</td>
+                    <td>All Dual benefits; recognition in annual report; two tickets to a gala preview</td>
+                </tr>
+            </table>
+
+            <h2>Donations</h2>
+            <p>
+                Tax-deductible gifts of any size support conservation, education, and free days for the public.
+                One-time and recurring donations are welcome. Common gift levels are $25, $50, $100, and $250—you
+                choose an amount that fits your budget.
+            </p>
+            <ul>
+                <li><strong>Education fund:</strong> School visits, teen labs, and digital learning kits.</li>
+                <li><strong>Exhibition fund:</strong> New commissions and traveling shows at MonoMuse.</li>
+                <li><strong>Where it is needed most:</strong> Flexible support directed by museum leadership.</li>
+            </ul>
+
+            <h2>Common questions</h2>
+            <p>Click a question to expand or collapse the answer.</p>
+            <div class="membership-accordion">
+                <div class="accordion-item">
+                    <button type="button" class="accordion-trigger" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">What does my membership support?</button>
+                    <div class="accordion-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1">
+                        <p>Member revenue helps fund exhibitions, free public days, and education programs. It also keeps our galleries staffed and our digital guides updated.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button type="button" class="accordion-trigger" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">Can I visit before I join?</button>
+                    <div class="accordion-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2">
+                        <p>Yes. Buy a day ticket on the Tickets page, then upgrade to membership within 14 days and we will credit one admission toward your annual fee (simulated policy for this project).</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button type="button" class="accordion-trigger" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">Are donations tax-deductible?</button>
+                    <div class="accordion-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3">
+                        <p>In a real nonprofit, yes—MonoMuse would send a formal acknowledgment for your records. This website is a student demo only and does not process real gifts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                <em>This site is a course project.</em> To “join” or give in a real deployment, you would connect these
+                options to a payment or CRM system. For now, use tickets for a visit and treat this page as the
+                information your visitors need to support the museum.
+            </p>
+
+            <p>
+                <a class="cta" href="tickets.html">Plan a visit &amp; buy tickets</a>
+                <a class="cta" href="explore.html">Learn more about MonoMuse</a>
+            </p>
+        </main>
+
+        <figure class="main_img"></figure>
+
+        <footer class="footer">
+            <section class="visitor-footer" aria-labelledby="footer-visit-title">
+                <h2 id="footer-visit-title" class="visitor-footer-heading">Plan your visit</h2>
+                <p><strong>Hours:</strong> Tuesday–Sunday 10 a.m.–5 p.m. Closed Mondays and major holidays.</p>
+                <p><strong>Location:</strong> 4400 Forbes Avenue, Pittsburgh, PA 15213 (Oakland, near Carnegie Mellon University).</p>
+                <p><strong>Contact:</strong> <a href="tel:+14125550199">(412) 555-0199</a> · <a href="mailto:visit@monomuse.org">visit@monomuse.org</a></p>
+            </section>
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>
