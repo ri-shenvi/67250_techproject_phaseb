@@ -79,6 +79,10 @@ nav a:hover {
     background-color: #a8c47d;
 }
 
+.main p .cta + .cta {
+    margin-left: 0.75rem;
+}
+
 /* Footer Styling */
 footer {
     border-top: 1px solid #4d5c3b;
