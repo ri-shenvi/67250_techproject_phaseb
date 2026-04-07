@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Riya Shenvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions - MonoMuse</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <div id="navLinks" class="nav_links">
+                <a href="explore.html">Explore</a>
+                <a id="navselected" href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <button type="button" class="nav_hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h3>Exhibition 1: Digital Dreams: Art in the Age of Algorithms</h3>
+            <p>This exhibition explores how artists are using AI and algorithms...</p>
+
+            <h3>Exhibition 2: Code &amp; Canvas: The Language of Creative Technology</h3>
+            <p>This exhibition highlights programming as a medium for artistic creation...</p>
+
+            <h3>In the spirit of the museum: scale, perspective, and wonder</h3>
+            <p>
+                MonoMuse shares the same impulse as science and design museums: help visitors see the world differently.
+                The short film <cite>Powers of Ten</cite> (1977) by the Eames Office is a classic piece of educational
+                media—often used in museum and classroom settings—that zooms from human scale out to the cosmos and inward
+                to the atomic scale.
+            </p>
+            <div class="video-embed-wrap">
+                <iframe
+                    class="video-embed"
+                    src="https://www.youtube.com/embed/0fKBhvDjuy0"
+                    title="Powers of Ten (1977) by Eames Office"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+        </main>
+        <figure class="main_img"></figure>
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>
