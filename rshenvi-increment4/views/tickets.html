@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Riya Shenvi">
+    <title>Tickets - MonoMuse</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+
+        <main class="main">
+            <h2>Buy Tickets</h2>
+
+            <h3>Ticket Prices</h3>
+            <table border="1">
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>General</td>
+                    <td>General admission for ages 18+</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Student ID required</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Member</td>
+                    <td>Member ID required</td>
+                    <td>$15</td>
+                </tr>
+            </table>
+
+            <h3>Available Dates This Month</h3>
+            <table border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Availability</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>April 12, 2026</td>
+                    <td>Available</td>
+                    <td><button type="button" onclick="showPurchaseForm('April 12, 2026')">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 18, 2026</td>
+                    <td>Available</td>
+                    <td><button type="button" onclick="showPurchaseForm('April 18, 2026')">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 24, 2026</td>
+                    <td>Available</td>
+                    <td><button type="button" onclick="showPurchaseForm('April 24, 2026')">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 30, 2026</td>
+                    <td>Available</td>
+                    <td><button type="button" onclick="showPurchaseForm('April 30, 2026')">Buy Now</button></td>
+                </tr>
+            </table>
+
+            <h3>Purchase Form</h3>
+            <form id="purchaseForm">
+                <label for="buyerName">Name</label><br>
+                <input type="text" id="buyerName" name="buyerName" required><br><br>
+
+                <label for="buyerEmail">Email</label><br>
+                <input type="email" id="buyerEmail" name="buyerEmail" required><br><br>
+
+                <label for="ticketCount">Number of Tickets</label><br>
+                <input type="number" id="ticketCount" name="ticketCount" min="1" required><br><br>
+
+                <label for="selectedDate">Selected Date</label><br>
+                <input type="text" id="selectedDate" name="selectedDate" readonly required><br><br>
+
+                <input type="submit" value="Submit Purchase" onclick="submitPurchase()">
+            </form>
+        </main>
+
+        <figure class="main_img"></figure>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>
